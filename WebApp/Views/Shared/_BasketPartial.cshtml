@@ -1,0 +1,17 @@
+﻿@*@model IEnumerable<ProductBasketVM>
+<ul>
+    @foreach (ProductBasketVM item in Model)
+        {
+            <li>
+                <div class="image-holder">
+                    <img src="~/img/@item.Image" alt="Alternate Text" />
+                </div>
+                <div class="info-holder">
+                    <h6 class="product-name">@item.Title</h6>
+                    <span class="quantity">@item.Count</span>
+                    <span class="amount">@item.Price</span>
+                    <a href="#" class="remove">x</a>
+                </div>
+            </li>
+        }
+</ul>*@

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIORELLO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="owl_carousel/dist/assets/owl.carousel.css">
+    <link rel="stylesheet" href="owl_carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="back-to-top">
+        <i class="fas fa-angle-up upper"></i>
+        <i class="fas fa-angle-up lower"></i>
+    </div>
+    <!-- header begins -->
+    @await Component.InvokeAsync("Header")
+    <!-- header ends -->
+    <!-- main begins -->
+    <main>
+        @RenderBody()
+    </main>
+    <!-- main ends -->
+    <!-- footer part begins -->
+    @await Component.InvokeAsync("Footer") 
+    <!-- footer part ends -->
+
+
+
+    <script src="https://kit.fontawesome.com/5745faddfa.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="owl_carousel/dist/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ProductVM>
+@foreach (ProductVM item in Model)
+{
+
+    <div class="col-lg-3 col-md-4 col-sm-6 flower">
+        <div class="image">
+            <img src="~/img/@item.Image" alt="">
+        </div>
+        <div class="text">
+            <div class="name">@item.Id</div>
+            <div class="option index"><a asp-controller="Home" asp-action="AddBasket" asp-route-id="@item.Id"><p>Add to Cart</p></a></div>
+            <div class="price">@item.Price</div>
+        </div>
+
+    </div>
+
+}

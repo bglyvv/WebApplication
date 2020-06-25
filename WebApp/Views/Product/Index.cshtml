@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ProductVM>
+@{
+    ViewData["Title"] = "Product";
+}
+
+<!-- header part begins -->
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="header">
+                <h1>Product List</h1>
+                <div class="content">
+                    <p>Where flowers are our inspiration</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="flower">
+    <div class="container">
+        <div class="row product_mainlist">
+            @*<partial name="_ProductPartial"/>*@
+            @await Component.InvokeAsync("Products",ViewBag.pageIndicator)
+        </div>
+        <div class="row justify-content-center">
+            <nav aria-label="...">
+                <ul class="pagination pagination-sm">
+                    @for (int i = 1; i <= ViewBag.Page; i++)
+                    {
+                        if (ViewBag.pageIndicator == i)
+                        {
+                            <li class="page-item disabled" style="border-color:black;"><a class="page-link" href="/product/index?page=@i">@i</a></li>
+                        }
+                        else
+                        {
+                            <li class="page-item" style="border-color:black;"><a style="color:#f34f3f"  class="page-link" href="/product/index?page=@i">@i</a></li>
+                        }
+
+
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</section>
+
