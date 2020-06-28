@@ -7,11 +7,9 @@ addtocart.onmouseenter = function () {
         url: "/Home/Json",
         type: "Get",
         success: function (response) {
-            console.log(response)
             //$(".cart-header").append(response)
-            
-            console.log(response)
             let result = JSON.parse(response);
+            console.log(result);
             if (result == null || result == "") {
                 document.querySelector("header nav .icons .cart-dropdown").style.display = "block"
                 document.querySelector("header nav .icons .cart-dropdown .cart-bottom").style.display = "none"

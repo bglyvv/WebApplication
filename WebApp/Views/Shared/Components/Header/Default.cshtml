@@ -160,106 +160,17 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="main">
-                                    <div class="header">
-                                        <a>BLOG</a>
-                                    </div>
-                                    <div class="content">
-                                        <ul>
-                                            <li><a href="">Masonry</a></li>
-                                            <li><a href="">Standart</a></li>
-                                            <li class="rightarrow">
-                                                <a href="">
-                                                    Post Types <i class="fa fa-angle-right"></i>
-                                                </a>
-                                                <div class="rightarrowinfo">
-                                                    <ul>
-                                                        <li><a href="">Standart</a></li>
-                                                        <li><a href="">Gallery</a></li>
-                                                        <li><a href="">Link</a></li>
-                                                        <li><a href="">Quote</a></li>
-                                                        <li><a href="">Gallery</a></li>
-                                                        <li><a href="">Audio</a></li>
-                                                        <li><a href="">Video</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="main">
-                                    <div class="header">
-                                        <a>ELEMENTS</a>
-                                    </div>
-                                    <div class="content">
-                                        <ul>
-                                            <li class="leftarrow">
-                                                <a href="">
-                                                    <i class="fa fa-angle-left"></i>Classic
-                                                </a>
-                                                <div class="leftarrowinfo">
-                                                    <ul>
-                                                        <li><a href="accordions.html">Accordions</a></li>
-                                                        <li><a href="tabs.html">Tabs</a></li>
-                                                        <li><a href="">Buttons</a></li>
-                                                        <li><a href="">Video Button</a></li>
-                                                        <li><a href="">Contact Form</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="leftarrow">
-                                                <a href="">
-                                                    <i class="fa fa-angle-left"></i>
-                                                    Infographic
-                                                </a>
-                                                <div class="leftarrowinfo">
-                                                    <ul>
-                                                        <li><a href="">Blog List</a></li>
-                                                        <li><a href="">Counters</a></li>
-                                                        <li><a href="">Countdown</a></li>
-                                                        <li><a href="">Google Maps</a></li>
-                                                        <li><a href="progress.html">Progress Bar</a></li>
-                                                        <li><a href="">Pies Charts</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="leftarrow">
-                                                <a href="">
-                                                    <i class="fa fa-angle-left"></i>
-                                                    Interactive
-                                                </a>
-                                                <div class="leftarrowinfo">
-                                                    <ul>
-                                                        <li><a href="">Image Gallery</a></li>
-                                                        <li><a href="">Testimonials</a></li>
-                                                        <li><a href="">Team</a></li>
-                                                        <li><a href="">Banner</a></li>
-                                                        <li><a href="shop_list.html">Shop List</a></li>
-                                                        <li><a href="">Portfolio List</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="leftarrow">
-                                                <a href="">
-                                                    <i class="fa fa-angle-left"></i>
-                                                    Typography
-                                                </a>
-                                                <div class="leftarrowinfo">
-                                                    <ul>
-                                                        <li><a href="">Headings</a></li>
-                                                        <li><a href="">Columns</a></li>
-                                                        <li><a href="">Section Title</a></li>
-                                                        <li><a href="">Blockquote</a></li>
-                                                        <li><a href="">Dropcaps</a></li>
-                                                        <li><a href="">Highlights</a></li>
-                                                        <li><a href="">Separators</a></li>
-                                                        <li><a href="">Custom Font</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
+                                @if (User.Identity.IsAuthenticated) {
+                                    <li class="main">
+                                        <div class="header"><a>@ViewBag.UserFullname</a></div>
+                                        <div class="content"><a asp-controller="Account" asp-action="Logout" >Log Out</a></div>
+                                    </li>
+                                }
+                                else {
+                                    <li class="login" style="margin-left:40px;float:left;font-family:'Montserrat',sans-serif;font-size:15px;margin-top:30px;cursor:pointer">
+                                        <div class="headerx"><a asp-controller="Account" asp-action="Login" style="color:black">LOG IN</a></div>
+                                    </li>
+                                    }
 
                             </ul>
 

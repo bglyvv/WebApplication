@@ -95,3 +95,5 @@ C:\Users\Kanan\Desktop\WebApplication-master\WebApp\obj\Debug\netcoreapp2.1\WebA
 C:\Users\Kanan\Desktop\WebApplication-master\WebApp\obj\Debug\netcoreapp2.1\WebApp.genruntimeconfig.cache
 C:\Users\Kanan\Desktop\WebApplication-master\WebApp\obj\Debug\netcoreapp2.1\WebApp.csproj.CopyComplete
 C:\Users\Kanan\Desktop\WebApplication-master\WebApp\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_BasketPartial.cshtml.g.cs
+C:\Users\Kanan\Desktop\WebApplication-master\WebApp\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Kanan\Desktop\WebApplication-master\WebApp\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.cshtml.g.cs

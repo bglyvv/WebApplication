@@ -290,6 +290,10 @@ $(document).ready(function () {
     }
 
     //let addtocartAll = document.querySelectorAll("#flowers .option")
+    //$("#flowers .option").click(function (event) {
+    //    console.log("aye")
+    //    event.preventDefault();
+    //});
 
 
     //for (let addtocart of addtocartAll) {

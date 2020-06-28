@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Newtonsoft.Json;
 using System;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApp.DAL;
 using WebApp.Migrations;
+using WebApp.Models;
 using WebApp.ViewModels;
 
 namespace WebApp.ViewComponents
@@ -14,9 +16,11 @@ namespace WebApp.ViewComponents
     public class HeaderViewComponent:ViewComponent
     {
         private readonly AppDbContext _db;
-        public HeaderViewComponent(AppDbContext db)
+        private readonly UserManager<User> _usermanager;
+        public HeaderViewComponent(AppDbContext db, UserManager<User> usermanager)
         {
             _db = db;
+            _usermanager = usermanager;
         }
 
         public async Task<IViewComponentResult> InvokeAsync() 
@@ -24,6 +28,10 @@ namespace WebApp.ViewComponents
             string existing_basket = Request.Cookies["basket"];
             ViewBag.BasketCount = 0;
             ViewBag.BasketTotal = 0;
+            if (User.Identity.IsAuthenticated) {
+                User loginUser = await _usermanager.FindByNameAsync(User.Identity.Name);
+                ViewBag.UserFullname = loginUser.Fullname;
+            }
             if (existing_basket != null)
             {
                 List<ProductBasketVM> basket = JsonConvert.DeserializeObject<List<ProductBasketVM>>(existing_basket);

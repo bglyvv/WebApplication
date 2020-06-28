@@ -64,7 +64,7 @@ using WebApp.Models;
             WriteLiteral("<div class=\"row\">\n    <div class=\"col-lg-12 grid-margin stretch-card\">\n        <div class=\"card\">\n            <div class=\"card-body\">\n                <h4 class=\"card-title\">Category List</h4>\n                <div class=\"col-12\">\n                    ");
             EndContext();
             BeginContext(288, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "42ce667e79434de58ada36fe09d55b84", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae63214b1d894837a28bb3613f988e31", async() => {
                 BeginContext(335, 21, true);
                 WriteLiteral("Create a new category");
                 EndContext();
@@ -121,7 +121,7 @@ using WebApp.Models;
             WriteLiteral("</p>\n                                    </td>\n                                    <td>\n                                        ");
             EndContext();
             BeginContext(1262, 112, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1348f7e851a246c59b1eb925ea40f858", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "204e4518ffb54249be06f455805a986e", async() => {
                 BeginContext(1337, 33, true);
                 WriteLiteral("<i class=\" mdi mdi-details \"></i>");
                 EndContext();
@@ -157,7 +157,7 @@ using WebApp.Models;
             WriteLiteral("\n                                        ");
             EndContext();
             BeginContext(1415, 112, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "366e2a9e96ec403784199c37b2b9bbf2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "62859d19b45c4cc2a73d551f16702667", async() => {
                 BeginContext(1488, 35, true);
                 WriteLiteral("<i class=\"mdi mdi-table-edit \"></i>");
                 EndContext();
@@ -193,7 +193,7 @@ using WebApp.Models;
             WriteLiteral("\n                                        ");
             EndContext();
             BeginContext(1568, 118, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "313bf1eec2474aa8aff26401cb1227c9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4460ea0c72b34d23bdc5d8e3478f4e1e", async() => {
                 BeginContext(1642, 40, true);
                 WriteLiteral("<i class=\" mdi mdi-delete-forever \"></i>");
                 EndContext();

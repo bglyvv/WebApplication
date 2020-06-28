@@ -61,7 +61,7 @@ using WebApp.Models;
             WriteLiteral("    <div class=\"col-lg-3 col-md-4 col-sm-6 flower\">\n        <div class=\"image\">\n            ");
             EndContext();
             BeginContext(160, 36, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "91a7e3d4aa6f4b0991a54afb283bba39", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "98556beed2a544879f4aaa927835289d", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

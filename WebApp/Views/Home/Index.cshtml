@@ -1,277 +1,264 @@
 ﻿@model HomeVM
-@{
-    ViewData["Title"] = "Index";
-}
-        <!-- slider part begins -->
-        <section id="slider">
-            <div class="images">
-                @foreach (Slider item in Model.Sliders) {
-                    <div class="item text-center">
-                        <img src="~/img/@item.Name" alt="">
-                        <span class="prevnumber">03</span>
-                        <span class="nextnumber">02</span>
-                    </div>
-                }
+@{ ViewData["Title"] = "Index"; }
+<!-- slider part begins -->
+<section id="slider">
+    <div class="images">
+        @foreach (Slider item in Model.Sliders)
+        {
+<div class="item text-center">
+    <img src="~/img/@item.Name" alt="">
+    <span class="prevnumber">03</span>
+    <span class="nextnumber">02</span>
+</div>}
+    </div>
+    <span class="prev arrows">&#10229;</span>
+    <span class="next arrows">&#10230;</span>
+    <div class="text">
+        <h2>Send <span>Flowers</span> Like you mean it</h2>
+        <p>
+            Where flowers are our inspiration to create lasting memories. Whatever the occasion, our
+            flowers
+            will make it special cursus a sit amet mauriss
+        </p>
+    </div>
+    <div class="sign">
+        <img src="img/sign.png" alt="">
+    </div>
+</section>
+<!-- slider part ends -->
+<!-- flowers part begins -->
+<section id="flowers">
+    <div class="container">
+        <div class="row">
+            <div class="category">
+                <p>Categories</p>
             </div>
-            <span class="prev arrows">&#10229;</span>
-            <span class="next arrows">&#10230;</span>
-            <div class="text">
-                <h2>Send <span>Flowers</span> Like you mean it</h2>
-                <p>
-                    Where flowers are our inspiration to create lasting memories. Whatever the occasion, our
-                    flowers
-                    will make it special cursus a sit amet mauriss
-                </p>
+            <div class="list">
+                <ul>
+                    <li><a class="activeflower" data-id="all">ALL</a></li>
+                    @foreach (Category item in Model.Categories)
+                    {
+        <li><a data-id="@item.Name.ToLower()">@item.Name</a></li>}
+                </ul>
             </div>
-            <div class="sign">
-                <img src="img/sign.png" alt="">
-            </div>
-        </section>
-        <!-- slider part ends -->
-        <!-- flowers part begins -->
-        <section id="flowers">
-            <div class="container">
-                <div class="row">
-                    <div class="category">
-                        <p>Categories</p>
-                    </div>
-                    <div class="list">
-                        <ul>
-                            <li><a class="activeflower" data-id="all">ALL</a></li>
-                            @foreach (Category item in Model.Categories) {
-                                <li><a data-id="@item.Name.ToLower()">@item.Name</a></li>
-                            }
-                        </ul>
-                    </div>
 
-                    <div class="types">
-                        <div class="type all activetype" data-id="all">
-                            <div class="row no-gutters text-center">
-                                @foreach (Product item in Model.Products)
-                                {
-
-                                    <div class="col-lg-3 col-md-4 col-sm-6 flower">
-                                        <div class="image">
-                                            <img src="img/@item.Image" alt="">
-                                        </div>
-                                        <div class="text">
-                                            <div class="name">@item.Title</div>
-                                            <div class="option index"><a style="color:#afafaf;margin-left:-170px" asp-controller="Home" asp-action="AddBasket" asp-route-id="@item.Id">Add to Cart</a></div>
-                                            <div class="price">@item.Price</div>
-                                        </div>
-
-                                    </div>
-
-                                }
-                            </div>
-                        </div>
-
-                        @foreach (Category category in Model.Categories)
+            <div class="types">
+                <div class="type all activetype" data-id="all">
+                    <div class="row no-gutters text-center">
+                        @foreach (Product item in Model.Products)
                         {
-                            <div class="type @category.Name.ToLower()" data-id="@category.Name.ToLower()">
-                                <div class="row no-gutters text-center">
-                                    @foreach (Product item in Model.Products)
-                                    {
-                                        if (category.Name.ToLower() == item.Category.Name.ToLower())
-                                        {
-                                            <div class="col-lg-3 col-md-4 col-sm-6 flower">
-                                                <div class="image">
-                                                    <img src="~/img/@item.Image" alt="">
-                                                </div>
-                                                <div class="text">
-                                                    <div class="name">@item.Title</div>
-                                                    <div class="option index"><a style="color:#afafaf;margin-left:-170px" asp-controller="Home" asp-action="AddBasket" asp-route-id="@item.Id">Add to Cart</a></div>
-                                                    <div class="price">@item.Price</div>
-                                                </div>
-                                            </div>
 
-                                        }
-                                    }
+            <div class="col-lg-3 col-md-4 col-sm-6 flower">
+                <div class="image">
+                    <img src="img/@item.Image" alt="">
+                </div>
+                <div class="text">
+                    <div class="name">@item.Title</div>
+                    <div class="option index"><a style="color:#afafaf;margin-left:-170px" asp-controller="Home" asp-action="AddBasket" asp-route-id="@item.Id">Add to Cart</a></div>
+                    <div class="price">@item.Price</div>
+                </div>
 
-                                </div>
-                            </div>
-
-
-                        }
-
+            </div>}
                     </div>
                 </div>
 
-        </section>
-        <!-- flowers part ends -->
-
-        <section id="video">
-            <div class="container">
-                <div class="row mt-5 mb-5">
-                    <div class="col-lg-6 col-12 overflow-hidden">
-                        <div class="video">
-                            <a href="@Model.AboutVideo.Link"
-                               target="_self"><img src="img/@Model.AboutVideo.Image" alt=""></a>
-                            <div class="outer">
-                                <p><i class="fas fa-caret-right fa-3x"></i></p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="col-lg-6 col-12 ">
-                        <div class="info">
-                            <h2>
-                                @Model.AboutVideo.Header
-                            </h2>
-                            <p>
-                                @Model.AboutVideo.Content
-                            </p>
-                            <ul>
-                                @foreach (VideoContent item in Model.VideoContents) {
-                                <li>
-                                    <p>@item.Content</p>
-                                </li>
-                                }
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- video section ends -->
-        <!-- expert section begins -->
-        <section id="experts">
-            <div class="text">
-                <div class="header">
-                    <div class="container">
-                        <div class="row text-center">
-                            <div class="col-lg-12">
-                                <h2>@Model.AboutExpert.Header </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="container">
-                        <div class="row text-center justify-content-center">
-                            <div class="col-lg-7 ">
-                                <p>
-                                    @Model.AboutExpert.Content
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="experts">
-                <div class="container">
-                    <div class="row text-center">
-                        @foreach (Expert item in Model.Experts) {
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <div class="expert"><img src="img/@item.Image" alt=""></div>
-                            <div class="info">
-                                <div class="name">
-                                    <h6>@item.Name</h6>
-                                </div>
-                                <div class="speciality">
-                                    <p>@item.Speciality</p>
-                                </div>
-                            </div>
-                        </div>
-                        }
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- experts part ends -->
-        <!-- email part begins -->
-        <section id="email">
-            <div class="text">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-lg-12">
-                            <h3>Join The Colorful Bunch! </h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form">
-                <div class="container">
-                    <div class="row  justify-content-center">
-                        <div class="left col-lg-6">
-                            <input type="email" name="your-email" value="" size="40" class="input" aria-required="true"
-                                   aria-invalid="false" placeholder="Email Address" autocomplete="off">
-                        </div>
-                        <div class="right col-lg-2">
-                            <input type="submit" value="Subscribe" class="button">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- email part ends -->
-        <!-- blog part begins -->
-        <section id="blog">
-            <div class="text">
-                <div class="header">
-                    <div class="container">
-                        <div class="row text-center">
-                            <div class="col-lg-12">
-                                <h2>@Model.AboutBlog.Header</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="container">
-                        <div class="row text-center justify-content-center">
-                            <div class="col-lg-7 ">
-                                <p>
-                                   @Model.AboutBlog.Content
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="articles">
-                <div class="container">
-                    <div class="row text-center">
-                        @foreach (Blog item in Model.Blogs)
-                        {
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <div class="images"><img src="img/@item.Image" alt=""></div>
-                                <div class="info">
-                                    <div class="name">
-                                        <h6>@item.Header </h6>
-                                    </div>
-                                    <div class="motto">
-                                        <p>@item.Content</p>
-                                    </div>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- blog part ends -->
-        <!-- owl -->
-        <section id="owl">
-            <div class="owl-carousel owl-theme instagramowl">
-                @foreach (Owl item in Model.Owls)
+                @foreach (Category category in Model.Categories)
                 {
-                    <div class="item">
-                        <a href=""><img src="img/@item.Image" alt=""></a>
-                        <a href="@item.Link">
-                            <div class="layer">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                        </a>
+    <div class="type @category.Name.ToLower()" data-id="@category.Name.ToLower()">
+        <div class="row no-gutters text-center">
+            @foreach (Product item in Model.Products)
+            {
+                if (category.Name.ToLower() == item.Category.Name.ToLower())
+                {
+<div class="col-lg-3 col-md-4 col-sm-6 flower">
+    <div class="image">
+        <img src="~/img/@item.Image" alt="">
+    </div>
+    <div class="text">
+        <div class="name">@item.Title</div>
+        <div class="option index"><a style="color:#afafaf;margin-left:-170px" asp-controller="Home" asp-action="AddBasket" asp-route-id="@item.Id">Add to Cart</a></div>
+        <div class="price">@item.Price</div>
+    </div>
+</div>}
+                }
+
+        </div>
+    </div>}
+
+            </div>
+        </div>
+
+</section>
+<!-- flowers part ends -->
+
+<section id="video">
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-6 col-12 overflow-hidden">
+                <div class="video">
+                    <a href="@Model.AboutVideo.Link"
+                       target="_self"><img src="img/@Model.AboutVideo.Image" alt=""></a>
+                    <div class="outer">
+                        <p><i class="fas fa-caret-right fa-3x"></i></p>
                     </div>
 
-                }
-            </div>
-            <div class="fiorello">
-                <p>#fiorello</p>
-            </div>
-        </section>
+                </div>
 
+            </div>
+            <div class="col-lg-6 col-12 ">
+                <div class="info">
+                    <h2>
+                        @Model.AboutVideo.Header
+                    </h2>
+                    <p>
+                        @Model.AboutVideo.Content
+                    </p>
+                    <ul>
+                        @foreach (VideoContent item in Model.VideoContents)
+                        {
+            <li>
+                <p>@item.Content</p>
+            </li>}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- video section ends -->
+<!-- expert section begins -->
+<section id="experts">
+    <div class="text">
+        <div class="header">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <h2>@Model.AboutExpert.Header </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row text-center justify-content-center">
+                    <div class="col-lg-7 ">
+                        <p>
+                            @Model.AboutExpert.Content
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="experts">
+        <div class="container">
+            <div class="row text-center">
+                @foreach (Expert item in Model.Experts)
+                {
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="expert"><img src="img/@item.Image" alt=""></div>
+        <div class="info">
+            <div class="name">
+                <h6>@item.Name</h6>
+            </div>
+            <div class="speciality">
+                <p>@item.Speciality</p>
+            </div>
+        </div>
+    </div>}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- experts part ends -->
+<!-- email part begins -->
+<section id="email">
+    <div class="text">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h3>Join The Colorful Bunch! </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="container">
+            <div class="row  justify-content-center">
+                <div class="left col-lg-6">
+                    <input type="email" name="your-email" value="" size="40" class="input" aria-required="true"
+                           aria-invalid="false" placeholder="Email Address" autocomplete="off">
+                </div>
+                <div class="right col-lg-2">
+                    <input type="submit" value="Subscribe" class="button">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- email part ends -->
+<!-- blog part begins -->
+<section id="blog">
+    <div class="text">
+        <div class="header">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <h2>@Model.AboutBlog.Header</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="row text-center justify-content-center">
+                    <div class="col-lg-7 ">
+                        <p>
+                            @Model.AboutBlog.Content
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="articles">
+        <div class="container">
+            <div class="row text-center">
+                @foreach (Blog item in Model.Blogs)
+                {
+    <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="images"><img src="img/@item.Image" alt=""></div>
+        <div class="info">
+            <div class="name">
+                <h6>@item.Header </h6>
+            </div>
+            <div class="motto">
+                <p>@item.Content</p>
+            </div>
+        </div>
+    </div>}
+            </div>
+        </div>
+    </div>
+</section>
+<!-- blog part ends -->
+<!-- owl -->
+<section id="owl">
+    <div class="owl-carousel owl-theme instagramowl">
+        @foreach (Owl item in Model.Owls)
+        {
+<div class="item">
+    <a href=""><img src="img/@item.Image" alt=""></a>
+    <a href="@item.Link">
+        <div class="layer">
+            <i class="fab fa-instagram"></i>
+        </div>
+    </a>
+</div>}
+    </div>
+    <div class="fiorello">
+        <p>#fiorello</p>
+    </div>
+</section>
 

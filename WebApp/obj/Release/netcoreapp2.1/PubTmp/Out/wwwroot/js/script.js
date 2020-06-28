@@ -289,99 +289,103 @@ $(document).ready(function () {
         localStorage.setItem("cart", JSON.stringify([]));
     }
 
-    let addtocartAll = document.querySelectorAll("#flowers .option")
+    //let addtocartAll = document.querySelectorAll("#flowers .option")
+    //$("#flowers .option").click(function (event) {
+    //    console.log("aye")
+    //    event.preventDefault();
+    //});
 
 
-    for (let addtocart of addtocartAll) {
-        addtocart.onclick = function (event) {
-            event.preventDefault();
-            if (localStorage.getItem("cart") == null) {
-                localStorage.setItem("cart", JSON.stringify([]));
-            }
-            let cart = JSON.parse(localStorage.getItem("cart"));
+    //for (let addtocart of addtocartAll) {
+    //    addtocart.onclick = function (event) {
+    //        event.preventDefault();
+    //        if (localStorage.getItem("cart") == null) {
+    //            localStorage.setItem("cart", JSON.stringify([]));
+    //        }
+    //        let cart = JSON.parse(localStorage.getItem("cart"));
             
-            let name = "" ;
-            if(this.parentElement.firstElementChild.getAttribute("class")=="button view-cart oa option"){
-                name=this.parentElement.parentElement.parentElement.parentElement.firstElementChild.innerText
-            }
-            else{
-                name = this.parentElement.firstElementChild.innerText
-            }
-            console.log(name)
+    //        let name = "" ;
+    //        if(this.parentElement.firstElementChild.getAttribute("class")=="button view-cart oa option"){
+    //            name=this.parentElement.parentElement.parentElement.parentElement.firstElementChild.innerText
+    //        }
+    //        else{
+    //            name = this.parentElement.firstElementChild.innerText
+    //        }
+    //        console.log(name)
 
-            let src = ""
-            if(this.parentElement.firstElementChild.getAttribute("class")=="button view-cart oa option"){
-                src = this.parentElement.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src")
-            }
-            else if(this.getAttribute("class") == "button justify-content-center option shop-listb"){
-                src = this.parentElement.parentElement.previousElementSibling.getAttribute("src")
-            }
-            else if(this.getAttribute("class") == "option index"){
-                src = this.parentElement.previousElementSibling.firstElementChild.getAttribute("src")
-            }
+    //        let src = ""
+    //        if(this.parentElement.firstElementChild.getAttribute("class")=="button view-cart oa option"){
+    //            src = this.parentElement.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.firstElementChild.getAttribute("src")
+    //        }
+    //        else if(this.getAttribute("class") == "button justify-content-center option shop-listb"){
+    //            src = this.parentElement.parentElement.previousElementSibling.getAttribute("src")
+    //        }
+    //        else if(this.getAttribute("class") == "option index"){
+    //            src = this.parentElement.previousElementSibling.firstElementChild.getAttribute("src")
+    //        }
             
-            let price = 0;
-            if(this.getAttribute("class")=="button view-cart oa option"){
-                price = Number(this.parentElement.parentElement.parentElement.parentElement.firstElementChild.nextElementSibling.innerText)
-            }
-            else if(this.getAttribute("class")=="button justify-content-center option shop-listb"){
-                price = 259
-            }
-            else if(this.getAttribute("class") == "option index"){
-                price = Number(this.nextElementSibling.innerText)
-            }
+    //        let price = 0;
+    //        if(this.getAttribute("class")=="button view-cart oa option"){
+    //            price = Number(this.parentElement.parentElement.parentElement.parentElement.firstElementChild.nextElementSibling.innerText)
+    //        }
+    //        else if(this.getAttribute("class")=="button justify-content-center option shop-listb"){
+    //            price = 259
+    //        }
+    //        else if(this.getAttribute("class") == "option index"){
+    //            price = Number(this.nextElementSibling.innerText)
+    //        }
 
-            // console.log(price)
-            let count = 1
-            if(this.getAttribute("class")=="button view-cart oa option"){
-                count = Number(document.querySelector("main #flowers .info .counter-cart .counter .number .quantity").innerText)
-            }
+    //        // console.log(price)
+    //        let count = 1
+    //        if(this.getAttribute("class")=="button view-cart oa option"){
+    //            count = Number(document.querySelector("main #flowers .info .counter-cart .counter .number .quantity").innerText)
+    //        }
 
-            let existingPro = cart.find(p => p.Name.toLowerCase() == name.toLowerCase());
+    //        let existingPro = cart.find(p => p.Name.toLowerCase() == name.toLowerCase());
 
-            if (existingPro === undefined) {
-                cart.push({
-                    Name: name,
-                    Src: src,
-                    Price: price,
-                    Count: count
-                })
+    //        if (existingPro === undefined) {
+    //            cart.push({
+    //                Name: name,
+    //                Src: src,
+    //                Price: price,
+    //                Count: count
+    //            })
 
-            }
-            else {
-                existingPro.Count += count;
-            }
-            localStorage.setItem("cart", JSON.stringify(cart));
-            countProduct()
-            priceProduct()
+    //        }
+    //        else {
+    //            existingPro.Count += count;
+    //        }
+    //        localStorage.setItem("cart", JSON.stringify(cart));
+    //        countProduct()
+    //        priceProduct()
 
 
-        }
-    }
+    //    }
+    //}
 
-    function countProduct() {
-        let sum = 0
-        let cart = JSON.parse(localStorage.getItem("cart"));
-        for (let products of cart) {
-            sum += products.Count
-        }
-        document.querySelector("header nav .icons .cart .bag .amount").innerText = sum
+    //function countProduct() {
+    //    let sum = 0
+    //    let cart = JSON.parse(localStorage.getItem("cart"));
+    //    for (let products of cart) {
+    //        sum += products.Count
+    //    }
+    //    document.querySelector("header nav .icons .cart .bag .amount").innerText = sum
 
-    }
+    //}
 
-    countProduct()
+    //countProduct()
 
-    function priceProduct() {
-        let price = 0
-        let cart = JSON.parse(localStorage.getItem("cart"));
-        for (let products of cart) {
-            price += products.Price * products.Count
-        }
-        document.querySelector("header nav .icons .total .price").innerText = "$" + price
-        document.querySelector("header nav .icons .cart-dropdown .cart-bottom .subtotal-holder .amount p").innerText = "$" + price
-    }
+    //function priceProduct() {
+    //    let price = 0
+    //    let cart = JSON.parse(localStorage.getItem("cart"));
+    //    for (let products of cart) {
+    //        price += products.Price * products.Count
+    //    }
+    //    document.querySelector("header nav .icons .total .price").innerText = "$" + price
+    //    document.querySelector("header nav .icons .cart-dropdown .cart-bottom .subtotal-holder .amount p").innerText = "$" + price
+    //}
 
-    priceProduct()
+    //priceProduct()
 
 
     // progress bar number animation

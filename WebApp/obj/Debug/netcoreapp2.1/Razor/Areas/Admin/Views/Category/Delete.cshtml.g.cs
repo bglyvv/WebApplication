@@ -81,12 +81,12 @@ using WebApp.Models;
             WriteLiteral("</p>\n        <p class=\"text-danger\">Are you sure? This process is not recoverable</p>\n    </div>\n</div>\n<div class=\"row\">\n    ");
             EndContext();
             BeginContext(283, 204, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ee17766d0374e57b1f243e7cb6ffe2a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dcd4181b6f574723b7ef4ca4dada0ae1", async() => {
                 BeginContext(334, 83, true);
                 WriteLiteral("\n        <button type=\"submit\" class=\"btn btn-danger mr-2\">Delete</button>\n        ");
                 EndContext();
                 BeginContext(417, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "711317c83ede4e89990dcc1ecb229621", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ec4b4f289cc4f06aaaef6adb307e59b", async() => {
                     BeginContext(460, 11, true);
                     WriteLiteral("Go to Index");
                     EndContext();
