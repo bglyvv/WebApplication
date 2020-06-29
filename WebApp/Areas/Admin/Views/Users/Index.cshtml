@@ -39,6 +39,8 @@
                                     </td>
                                     <td>
                                         <a asp-route-id="@item.Id" asp-area="Admin" asp-controller="Users" asp-action="Detail" class="btn btn-success"><i class=" mdi mdi-details "></i></a>
+                                        <a asp-action="Edit" asp-controller="Users" asp-route-id="@item.Id" class="btn btn-warning"><i class="mdi mdi-table-edit "></i></a>
+                                        <a asp-action="Delete" asp-controller="Users" asp-route-id="@item.Id" class="btn btn-danger"><i class=" mdi mdi-delete-forever "></i></a>
                                     </td>
                                 </tr>
                             }

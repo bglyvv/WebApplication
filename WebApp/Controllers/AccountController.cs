@@ -57,6 +57,7 @@ namespace WebApp.Controllers
             await _signInManager.SignInAsync(user, true);
             return RedirectToAction("Index", "Home");
         }
+
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
