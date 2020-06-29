@@ -79,6 +79,10 @@ namespace WebApp.Controllers
                 ModelState.AddModelError(string.Empty, "Email or Passwrod are wrong!!!");
                 return View(login);
             }
+            if (active_user.isDeleted == true) {
+                ModelState.AddModelError(string.Empty, "This user has been deleted or blocked");
+                return View(login);
+            }
             var signInResult = await _signInManager.PasswordSignInAsync(active_user,login.Password,false,true);
 
             if (!signInResult.Succeeded) {

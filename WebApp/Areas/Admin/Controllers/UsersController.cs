@@ -16,9 +16,11 @@ namespace WebApp.Areas.Admin.Controllers
     {
 
         private readonly UserManager<User> _userManager;
-        public UsersController(UserManager<User> userManager)
+        private readonly SignInManager<User> _signInManager;
+        public UsersController(UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
         public async Task<IActionResult> Index()
         {
@@ -26,15 +28,17 @@ namespace WebApp.Areas.Admin.Controllers
             List<UserVM> usersVM = new List<UserVM>();
 
             foreach (var user in users) {
-                UserVM userVM = new UserVM
-                {
-                    Id = user.Id,
-                    Fullname = user.Fullname,
-                    Username = user.UserName,
-                    Email = user.Email,
-                    Role = (await _userManager.GetRolesAsync(user))[0]
-                };
-                usersVM.Add(userVM);
+                if (user.isDeleted == false) {
+                    UserVM userVM = new UserVM
+                    {
+                        Id = user.Id,
+                        Fullname = user.Fullname,
+                        Username = user.UserName,
+                        Email = user.Email,
+                        Role = (await _userManager.GetRolesAsync(user))[0]
+                    };
+                    usersVM.Add(userVM);
+                }
             }
             return View(usersVM);
         }
@@ -123,6 +127,27 @@ namespace WebApp.Areas.Admin.Controllers
                 Role = (await _userManager.GetRolesAsync(user))[0]
             };
             return View(userVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ActionName("Delete")]
+        public async Task<IActionResult> DeletePost(string id,UserVM userVM) {
+            if (id == null) return NotFound();
+            User user = await _userManager.FindByIdAsync(id);
+            if (user == null) return NotFound();
+
+            user.isDeleted =true;
+            await _userManager.UpdateAsync(user);
+            return RedirectToAction("Index", "Users");
+
+        }
+
+        public async Task<IActionResult> Logout() {
+            await _signInManager.SignOutAsync();
+            return Redirect("/Home/Index");
+            
+        
         }
     }
 }

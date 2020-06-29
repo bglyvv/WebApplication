@@ -11,5 +11,12 @@ namespace WebApp.Models
     {
         [Required,StringLength(100)]
         public string Fullname { get; set; }
+        [Required]
+        public bool isDeleted { get; set; }
+
+        public User()
+        {
+            isDeleted = false;
+        }
     }
 }

@@ -373,6 +373,8 @@ namespace WebApp.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256);
 
+                    b.Property<bool>("isDeleted");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
