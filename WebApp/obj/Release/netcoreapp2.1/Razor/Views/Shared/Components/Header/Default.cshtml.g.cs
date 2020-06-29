@@ -62,7 +62,7 @@ using WebApp.Models;
             WriteLiteral("\n<header>\n    <nav id=\"main_nav\">\n        <div class=\"container\">\n            <div class=\"row no-gutters \">\n\n                <!-- logo part begins -->\n                <div class=\"col-lg-2\">\n                    <div class=\"logo\">\n                        ");
             EndContext();
             BeginContext(266, 36, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "785c8cdf4cf44599a9f39d6e9c01dff2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a3e17b5a1a2944468d9b02518339d42f", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -105,7 +105,7 @@ AddHtmlAttributeValue("", 282, Model.Logo, 282, 11, false);
                                             <li>");
             EndContext();
             BeginContext(1150, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4f0f19736b144a1d80f4313e59a35f17", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3264127cfef4d04894c6e97b5846cd5", async() => {
                 BeginContext(1194, 9, true);
                 WriteLiteral("Main Home");
                 EndContext();
@@ -199,7 +199,7 @@ AddHtmlAttributeValue("", 282, Model.Logo, 282, 11, false);
                                                         <li>");
             EndContext();
             BeginContext(5710, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1cafdaa9c2334873acab3bbd5586d273", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fe90da292d24401a4bdd25429f688e5", async() => {
                 BeginContext(5757, 12, true);
                 WriteLiteral("Product List");
                 EndContext();
@@ -314,7 +314,7 @@ AddHtmlAttributeValue("", 282, Model.Logo, 282, 11, false);
             WriteLiteral("</a></div>\n                                        <div class=\"content\">");
             EndContext();
             BeginContext(10841, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5469c32fe7694c6a87add07439dbfe80", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0c14ae25e4aa485c87c428c95e0dec8c", async() => {
                 BeginContext(10890, 7, true);
                 WriteLiteral("Log Out");
                 EndContext();
@@ -347,7 +347,7 @@ AddHtmlAttributeValue("", 282, Model.Logo, 282, 11, false);
             WriteLiteral("                                    <li class=\"login\" style=\"margin-left:40px;float:left;font-family:\'Montserrat\',sans-serif;font-size:15px;margin-top:30px;cursor:pointer\">\n                                        <div class=\"headerx\">");
             EndContext();
             BeginContext(11257, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c8a1a54c75634c568aa878bc7bc0f4df", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "05c110d6a0fb45868cb037a2e2ea35de", async() => {
                 BeginContext(11324, 6, true);
                 WriteLiteral("LOG IN");
                 EndContext();

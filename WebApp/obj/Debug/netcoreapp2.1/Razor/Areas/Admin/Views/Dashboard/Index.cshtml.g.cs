@@ -18,8 +18,18 @@ using WebApp.Models;
 
 #line default
 #line hidden
+#line 2 "C:\Users\Kanan\Desktop\WebApplication-master\WebApp\Areas\Admin\Views\_ViewImports.cshtml"
+using WebApp.ViewModels;
+
+#line default
+#line hidden
+#line 3 "C:\Users\Kanan\Desktop\WebApplication-master\WebApp\Areas\Admin\Views\_ViewImports.cshtml"
+using WebApp.Helpers;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f593056579a60a2b1b1cffabbea6b46ddd0cebdb", @"/Areas/Admin/Views/Dashboard/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4d3a12897f29aeff396d3681dcc6405297affd87", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7e7de051cbdd59756e10f9e236f0068f885a6109", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Dashboard_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

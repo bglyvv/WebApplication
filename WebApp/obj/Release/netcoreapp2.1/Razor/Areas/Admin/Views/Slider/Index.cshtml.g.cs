@@ -18,8 +18,18 @@ using WebApp.Models;
 
 #line default
 #line hidden
+#line 2 "C:\Users\Kanan\Desktop\WebApplication-master\WebApp\Areas\Admin\Views\_ViewImports.cshtml"
+using WebApp.ViewModels;
+
+#line default
+#line hidden
+#line 3 "C:\Users\Kanan\Desktop\WebApplication-master\WebApp\Areas\Admin\Views\_ViewImports.cshtml"
+using WebApp.Helpers;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a18c455f03b80e4b2fbd69dc648b361392bfc5e2", @"/Areas/Admin/Views/Slider/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4d3a12897f29aeff396d3681dcc6405297affd87", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7e7de051cbdd59756e10f9e236f0068f885a6109", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Slider_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("style", new global::Microsoft.AspNetCore.Html.HtmlString("width:150px !important; height:100px !important; border-radius:0; border:2px solid black"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -89,7 +99,7 @@ using WebApp.Models;
             WriteLiteral("                                <tr>\n                                    <td class=\"py-1\">\n                                        ");
             EndContext();
             BeginContext(1004, 141, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "edcac17427564de5b25171021f1aaec0", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a108b0c07fb1404c9f9d5f317eaf8288", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -116,7 +126,7 @@ AddHtmlAttributeValue("", 1020, slider.Name, 1020, 12, false);
             WriteLiteral("\n                                    </td>\n                                    <td>\n                                        ");
             EndContext();
             BeginContext(1269, 110, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "548dba4582b74967a360ba70daddc76e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e00147f5f3bd444f891387a50202edae", async() => {
                 BeginContext(1342, 33, true);
                 WriteLiteral("<i class=\" mdi mdi-details \"></i>");
                 EndContext();

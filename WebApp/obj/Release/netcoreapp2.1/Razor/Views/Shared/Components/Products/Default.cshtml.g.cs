@@ -64,7 +64,7 @@ using WebApp.Models;
             WriteLiteral("    <div class=\"col-lg-3 col-md-4 col-sm-6 flower\">\n        <div class=\"image\">\n            ");
             EndContext();
             BeginContext(160, 36, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "62b96852a6c8493f8338c15ebeebf18d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "2ba710b8e61a4c578ab46b7d98553ca6", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -100,7 +100,7 @@ AddHtmlAttributeValue("", 176, item.Image, 176, 11, false);
             WriteLiteral("</div>\n            <div class=\"option index\">");
             EndContext();
             BeginContext(322, 94, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ad7f1f03acd440608a127ec849363357", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "32061207fa19462fa49327240cc16a22", async() => {
                 BeginContext(394, 18, true);
                 WriteLiteral("<p>Add to Cart</p>");
                 EndContext();

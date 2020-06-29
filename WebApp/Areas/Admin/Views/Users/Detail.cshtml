@@ -1,0 +1,52 @@
+﻿@model UserVM
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "_AdminLayout";
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">User</h4>
+                <table style="width:100%">
+                    <tr>
+                        <th>Fullname:</th>
+                        <td>@Model.Fullname</td>
+                    </tr>
+                    <tr>
+                        <th>Username:</th>
+                        <td>@Model.Username</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td>@Model.Email</td>
+                    </tr>
+                    <tr>
+                        <th>Role:</th>
+                        <td>@Model.Role</td>
+                    </tr>
+                </table>
+                <h3>Roles:</h3>
+                    <form class="forms-sample" method="post" >
+                        <div class="row">
+                            <select name="roles" id="roles">
+                                @foreach (var item in @Enum.GetValues(typeof(Helper.Roles)).Cast<Helper.Roles>().ToList()) {
+                                <option value="@item">@item</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="row mt-3">
+                            <button type="submit" class="btn btn-primary mr-2">Do It</button>
+                            <a asp-action="index" asp-controller="Users" class="btn btn-dark">Go to Index</a>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_Validation" />
+}
+

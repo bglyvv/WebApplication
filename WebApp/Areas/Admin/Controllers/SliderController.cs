@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApp.DAL;
 using WebApp.Models;
@@ -10,6 +11,7 @@ namespace WebApp.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = "Admin,Moderator")]
     public class SliderController : Controller
     {
         private readonly AppDbContext _db;

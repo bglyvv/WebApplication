@@ -27,9 +27,11 @@ namespace WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
             services.AddSession(options => {
                 options.IdleTimeout = TimeSpan.FromMinutes(20);
             });
+
             services.AddIdentity<User,IdentityRole>(IdentityOptions=> {
                 IdentityOptions.Password.RequireDigit = true;
                 IdentityOptions.Password.RequireLowercase = true;
@@ -52,12 +54,16 @@ namespace WebApp
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStaticFiles();
+
             app.UseAuthentication();
+
             app.UseSession();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute( name: "areas",template: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
             });
+
             app.UseMvc(routes => {
                 routes.MapRoute("default", "{controller=Home}/{action=Index}/{ID?}");
             });

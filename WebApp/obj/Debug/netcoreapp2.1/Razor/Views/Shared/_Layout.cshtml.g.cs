@@ -57,7 +57,7 @@ using WebApp.Models;
             WriteLiteral("<!DOCTYPE html>\n<html lang=\"en\">\n\n");
             EndContext();
             BeginContext(34, 971, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "73d3cee1ca8446f3bb738edb47bcc608", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fc1ea7e9a4fe4222b9121efb53dcd9ce", async() => {
                 BeginContext(40, 790, true);
                 WriteLiteral(@"
     <meta charset=""UTF-8"">
@@ -72,7 +72,7 @@ using WebApp.Models;
     ");
                 EndContext();
                 BeginContext(830, 46, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "d676c5a7f91a46f2b0cfece0cedf2d2b", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "9fe1f521783640f39cf5b368c9c19bcf", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -106,7 +106,7 @@ using WebApp.Models;
             WriteLiteral("\n\n");
             EndContext();
             BeginContext(1007, 774, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "887bc22f6fcb4589b8737465aa49270c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6e07d9ba75cf46b8b7f42c335dd71ca3", async() => {
                 BeginContext(1013, 165, true);
                 WriteLiteral("\n    <div class=\"back-to-top\">\n        <i class=\"fas fa-angle-up upper\"></i>\n        <i class=\"fas fa-angle-up lower\"></i>\n    </div>\n    <!-- header begins -->\n    ");
                 EndContext();
